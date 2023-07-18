@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;1,800;1,900&family=Lilita+One&family=Montserrat:ital,wght@0,400;0,600;0,700;1,600;1,900&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,600;1,800;1,900&family=Tektur:wght@700&family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Stone, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Adjust the styles based on the screen width */
+        @media (max-width: 968px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                justify-items: center;
+            }
+            #humanDance,
+            #botDance {
+                width: 100%;
+                text-align: center;
+            }
+            button{
+                width: 100%;
+                margin-bottom: 10px;
+                align-self: center;
+            }
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>Stone 🪨, Paper 🗞️, Scissors ✂️</h1>
+    <div class="container">
+        <div class="human-animation" id="humanDance">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXhldmJlenVheWZ4ZDEyanY3dGk2OWd1NndzNmVyeWU2YzVwdG1sbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6eriz92ZNERhAaTu69/giphy-downsized-large.gif" alt="">
+        </div>
+        <div class="myBoard">
+            <table>
+                <h2>Scorecard</h2>
+                <tbody>
+                    <tr>
+                        <td id="humanScore">0</td>
+                        <td id="computerScore">0</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>you</td>
+                        <td>bot</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="bot-animation" id="botDance">
+            <img src="https://media.giphy.com/media/SX6AoXlEp2ri2IM9Fr/giphy.gif" alt="">
+        </div>
+    </div>
+    <h2>Make your choice</h2>
+    <button id="stone">Stone</button>
+    <button id="paper">Paper</button>
+    <button id="scisscor">Scissors</button>
+
+    <div id="status"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

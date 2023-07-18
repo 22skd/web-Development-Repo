@@ -1,0 +1,140 @@
+body{
+    font-family: 'Tektur', cursive;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    background-color: rgb(4, 77, 114);
+    color: aliceblue;
+    margin: 3rem;
+}
+
+button{
+    background-color:rgb(235, 160, 160);
+    color: aliceblue;
+    border: none;
+    border-radius:90px;
+    padding: 10px 30px 10px 30px ;
+    margin-right: 25px;
+    font-family: 'tektur',cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 150px;
+}
+button:hover{
+    background-color: red;
+}
+
+.myBoard{
+ width:25rem;
+ margin: auto;
+ border: 1px solid aliceblue;
+
+}
+.myBoard h2{
+    border-bottom: 1px solid aliceblue;
+    margin: 0;
+    padding: 10px;
+    font-size: 3rem;
+}
+.myBoard table{
+    margin: 10px auto;
+    width: 100%;
+    
+}
+.myBoard td{
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+#status {
+    margin-top: 20px;
+}
+
+
+
+.container {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-items: center;
+  }
+  
+
+  .grid-item {
+    width: 100%;
+  }
+
+  @keyframes humanDanceAnimation {
+    0% {
+        opacity: 0; /* Start with opacity 0 to hide the element */
+        transform: translateX(-100%); /* Move to the left */
+      }
+      100% {
+        opacity: 1; /* End with opacity 1 to show the element */
+        transform: translateX(0%); /* Return to the original position */
+      }
+    }
+  
+  @keyframes botDanceAnimation {
+    0% {
+        opacity: 0; /* Start with opacity 0 to hide the element */
+        transform: translateX(100%); /* Move to the left */
+      }
+      100% {
+        opacity: 1; /* End with opacity 1 to show the element */
+        transform: translateX(0%); /* Return to the original position */
+      }
+    }
+  
+ 
+  
+  #humanDance img {
+    border-radius: 90px;
+    border: 1px solid;
+    width: 200px; /* Adjust the width as needed */
+    height: 300px; /* Set height to auto for aspect ratio preservation */
+    
+  }
+  
+  #botDance img {
+    border-radius: 90px;
+    border: 1px solid;
+    width: 200px; /* Adjust the width as needed */
+    height: 300px; /* Set height to auto for aspect ratio preservation */
+   
+  }
+  
+.human-animation{
+    animation:humanDanceAnimation 1s ease-in-out;
+    
+  } 
+.bot-animation{
+    animation:botDanceAnimation 1s ease-in-out;
+}
+
+#humanDance,
+#botDance {
+position: relative;
+  width: 200px; /* Adjust the width as needed */
+  height: 300px; /* Set height to auto for aspect ratio preservation */
+  border-radius: 90px;
+
+  display: grid; /* Set display to grid */
+  place-items: center; /* Center the content within the grid */
+}
+
+#humanDance img,
+#botDance img {
+  max-width: 100%; /* Ensure the image fits within the container */
+  max-height: 100%; /* Ensure the image fits within the container */
+  visibility: hidden; /* Hide the image by default */
+}
+
+#humanDance.human-animation img,
+#botDance.bot-animation img {
+  visibility: visible; /* Show the image when animation class is applied */
+}
+
+
